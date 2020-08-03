@@ -1,4 +1,4 @@
-DROP TABLE `company`;
+DROP TABLE IF EXISTS `company`;
 
 CREATE TABLE `company` (
     `emp_id` INT NOT NULL,
