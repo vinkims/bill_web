@@ -4,22 +4,27 @@ CREATE TABLE `company` (
     `emp_id` INT NOT NULL,
     `company` VARCHAR(30),
     `hours_worked` INT NOT NULL,
-    `unit_price` INT NOT NULL 
+    `unit_price` INT NOT NULL,
+    `start_time` DATETIME NOT NULL,
+    `end_time` DATETIME NOT NULL,
+    `cost` INT NOT NULL
 );
 
-INSERT INTO `company` (`emp_id`, `company`, `hours_worked`, `unit_price`) VALUES (12, 'Ford', 3, 300);
-INSERT INTO `company` (`emp_id`, `company`, `hours_worked`, `unit_price`) VALUES (31, 'Subaru', 2, 350);
-INSERT INTO `company` (`emp_id`, `company`, `hours_worked`, `unit_price`) VALUES (54, 'Mitsubishi', 4, 300);
-INSERT INTO `company` (`emp_id`, `company`, `hours_worked`, `unit_price`) VALUES (86, 'Nissan', 1, 400);
-INSERT INTO `company` (`emp_id`, `company`, `hours_worked`, `unit_price`) VALUES (31, 'Mitsubishi', 4, 350);
-INSERT INTO `company` (`emp_id`, `company`, `hours_worked`, `unit_price`) VALUES (54, 'Nissan', 2, 300);
-INSERT INTO `company` (`emp_id`, `company`, `hours_worked`, `unit_price`) VALUES (86, 'Ford', 6, 400);
-INSERT INTO `company` (`emp_id`, `company`, `hours_worked`, `unit_price`) VALUES (12, 'Subaru', 3, 300);
-INSERT INTO `company` (`emp_id`, `company`, `hours_worked`, `unit_price`) VALUES (54, 'Ford', 6, 300);
-INSERT INTO `company` (`emp_id`, `company`, `hours_worked`, `unit_price`) VALUES (86, 'Subaru', 10, 400);
-INSERT INTO `company` (`emp_id`, `company`, `hours_worked`, `unit_price`) VALUES (12, 'Mitsubishi', 4, 300);
-INSERT INTO `company` (`emp_id`, `company`, `hours_worked`, `unit_price`) VALUES (31, 'Nissan', 2, 350);
-INSERT INTO `company` (`emp_id`, `company`, `hours_worked`, `unit_price`) VALUES (86, 'Mitsubishi', 1, 400);
-INSERT INTO `company` (`emp_id`, `company`, `hours_worked`, `unit_price`) VALUES (12, 'Nissan', 2, 300);
-INSERT INTO `company` (`emp_id`, `company`, `hours_worked`, `unit_price`) VALUES (31, 'Ford', 7, 350);
-INSERT INTO `company` (`emp_id`, `company`, `hours_worked`, `unit_price`) VALUES (54, 'Subaru', 8, 300);
+INSERT INTO `company` (`emp_id`, `company`, `hours_worked`, `unit_price`, `start_time`, `end_time`, `cost`) VALUES 
+(12, 'Ford', 3, 300, '2020-01-02 01:00:00', '2020-01-02 04:00:00', 900),
+(31, 'Subaru', 2, 350, '2020-01-02 11:00:00', '2020-01-02 12:00:00', 700),
+(54, 'Mitsubishi', 4, 300, '2020-01-02 12:00:00', '2020-01-02 16:00:00', 1200),
+(86, 'Nissan', 1, 400, '2020-01-02 08:00:00', '2020-01-02 09:00:00', 400),
+(31, 'Mitsubishi', 4, 350, '2020-01-02 17:00:00', '2020-01-02 21:00:00',1400),
+(54, 'Nissan', 2, 300, '2020-01-02 07:30:00', '2020-01-02 09:30:00', 600),
+(86, 'Ford', 6, 400, '2020-01-02 01:00:00', '2020-01-02 07:00:00', 2400),
+(12, 'Subaru', 3, 300, '2020-01-02 15:50:00', '2020-01-02 18:50:00', 900),
+(54, 'Ford', 6, 300, '2020-01-02 04:00:00', '2020-01-02 10:00:00', 1800),
+(86, 'Subaru', 10, 400, '2020-01-02 11:00:00', '2020-01-02 21:00:00', 4000),
+(12, 'Mitsubishi', 4, 300, '2020-01-02 16:00:00', '2020-01-02 20:00:00', 1200),
+(31, 'Nissan', 2, 350, '2020-01-02 06:00:00', '2020-01-02 08:00:00', 1400),
+(86, 'Mitsubishi', 1, 400, '2020-01-02 10:00:00', '2020-01-02 11:00:00', 400),
+(12, 'Nissan', 2, 300, '2020-01-02 13:00:00', '2020-01-02 15:00:00', 600),
+(31, 'Ford', 7, 350, '2020-01-02 09:00:00', '2020-01-02 16:00:00', 2450),
+(54, 'Subaru', 8, 300, '2020-01-02 07:00:00', '2020-01-02 15:00:00', 2400);
+COMMIT;
