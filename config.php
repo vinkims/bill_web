@@ -1,11 +1,4 @@
 <?php
-    $filename = "bills-2.sql";
-    $mysql_host = "localhost";
-    $mysql_username = "root";
-    $mysql_password = "";
-    $mysql_database = "bills";
-
-
     $conn = new mysqli('localhost', 'root', '', 'bills');
     $query = '';
     $sqlScript = file('bills.sql');
