@@ -1,5 +1,10 @@
 <?php
-    $conn = new mysqli('localhost', 'root', '', 'bills');
+    $localhost = 'localhost';
+    $username = 'root';
+    $password = '';
+    $database = 'bills';
+
+    $conn = new mysqli($localhost, $username, $password, $database);
     $query = '';
     $sqlScript = file('bills.sql');
 
