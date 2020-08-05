@@ -4,7 +4,7 @@
     $password = '';
     $database = 'bills';
 
-    $conn = new mysqli($localhost, $username, $password, $database);
+    $conn = new mysqli($host, $username, $password, $database);
     $query = '';
     $sqlScript = file('bills.sql');
 
